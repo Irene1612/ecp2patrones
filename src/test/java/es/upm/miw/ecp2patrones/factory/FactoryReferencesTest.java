@@ -1,9 +1,11 @@
-package es.upm.miw.ecp2patrones;
+package es.upm.miw.ecp2patrones.factory;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import es.upm.miw.ecp2patrones.factory.FactoryReferences;
 
 public class FactoryReferencesTest {
     private FactoryReferences factory;

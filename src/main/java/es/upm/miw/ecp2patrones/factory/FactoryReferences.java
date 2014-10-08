@@ -1,4 +1,4 @@
-package es.upm.miw.ecp2patrones;
+package es.upm.miw.ecp2patrones.factory;
 
 import java.util.HashMap;
 import java.util.Map;
