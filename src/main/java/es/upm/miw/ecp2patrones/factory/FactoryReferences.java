@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FactoryReferences {
+    private static FactoryReferences factory = new FactoryReferences();
+    
     private Map<String, Integer> references;
 
     private int reference;
@@ -11,6 +13,10 @@ public class FactoryReferences {
     public FactoryReferences() {
         this.references = new HashMap<>();
         this.reference = 0;
+    }
+    
+    public static FactoryReferences getFactory(){
+        return FactoryReferences.factory;
     }
 
     public int getReference(String key) {
