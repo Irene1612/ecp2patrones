@@ -15,19 +15,23 @@ public class Calculadora {
     protected void setTotal(int total) {
         this.total = total;
     }
+    
+    private void almacenarAnterior(){
+        this.valorAnterior = this.total;
+    }
 
     public void sumar(int valor) {
-        this.valorAnterior = this.total;
+        this.almacenarAnterior();
         this.setTotal(this.total + valor);
     }
 
     public void restar(int valor) {
-        this.valorAnterior = this.total;
+        this.almacenarAnterior();
         this.setTotal(this.total - valor);
     }
 
     public void iniciar() {
-        this.valorAnterior = this.total;
+        this.almacenarAnterior();
         this.setTotal(0);
     }
     
