@@ -2,22 +2,21 @@ package es.upm.miw.ecp2patrones.calculator;
 
 import upm.jbb.IO;
 
-public class ComandoDeshacer extends Comando {
+public class ComandoGuardar extends Comando {
 
     private GestorMementos<MementoCalculadora> gestorMementos;
-    
-    public ComandoDeshacer(Calculadora calc) {
+    public ComandoGuardar(Calculadora calc) {
         this.calculadora = calc;
     }
-
+    
     @Override
     public String name() {
-        return "Deshacer";
+        return "Guardar";
     }
 
     @Override
     public void execute() {
-        this.calculadora.deshacer(this.gestorMementos.getMemento((String) IO.in.select(gestorMementos.keys(), "Restaurar")));
+        this.gestorMementos.addMemento(IO.in.readString("Nombre del memento"), this.calculadora.guardar());
     }
 
 }
