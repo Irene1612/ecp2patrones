@@ -2,6 +2,6 @@ package es.upm.miw.ecp2patrones.calculator;
 
 public abstract class Comando implements ComandoInterface{
     
-    protected Calculadora calculadora;   
+    protected CalculadoraMementable calculadora;   
    
 }

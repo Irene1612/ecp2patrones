@@ -6,8 +6,9 @@ public class ComandoDeshacer extends Comando {
 
     private GestorMementos<MementoCalculadora> gestorMementos;
     
-    public ComandoDeshacer(Calculadora calc) {
+    public ComandoDeshacer(CalculadoraMementable calc, GestorMementos<MementoCalculadora> gm) {
         this.calculadora = calc;
+        this.gestorMementos = gm;
     }
 
     @Override

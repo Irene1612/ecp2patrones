@@ -4,19 +4,22 @@ import upm.jbb.IO;
 
 public class ComandoGuardar extends Comando {
 
-    private GestorMementos<MementoCalculadora> gestorMementos;
-    public ComandoGuardar(Calculadora calc) {
-        this.calculadora = calc;
-    }
-    
-    @Override
-    public String name() {
-        return "Guardar";
-    }
+	private GestorMementos<MementoCalculadora> gestorMementos;
 
-    @Override
-    public void execute() {
-        this.gestorMementos.addMemento(IO.in.readString("Nombre del memento"), this.calculadora.guardar());
-    }
+	public ComandoGuardar(CalculadoraMementable calc, GestorMementos<MementoCalculadora> gm) {
+		this.calculadora = calc;
+		 this.gestorMementos = gm;
+	}
+
+	@Override
+	public String name() {
+		return "Guardar";
+	}
+
+	@Override
+	public void execute() {
+		this.gestorMementos.addMemento(IO.in.readString("Nombre del memento"),
+				this.calculadora.guardar());
+	}
 
 }

@@ -8,7 +8,7 @@ public class GestorMementos<T> {
     private Map<String, T> lista = new HashMap<String, T>();
 
     public void addMemento(String key, T memento) {
-        this.lista.put(this.lista.size() + ":" + key, memento);
+        this.lista.put(key, memento);
     }
 
     public T getMemento(String key) {

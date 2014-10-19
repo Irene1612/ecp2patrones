@@ -2,7 +2,7 @@ package es.upm.miw.ecp2patrones.calculator;
 
 public class ComandoIniciar extends Comando {
     
-    public ComandoIniciar(Calculadora calc) {
+    public ComandoIniciar(CalculadoraMementable calc) {
         this.calculadora=calc;
     }
 

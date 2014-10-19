@@ -4,7 +4,7 @@ import upm.jbb.IO;
 
 public class ComandoRestar extends Comando {
     
-    public ComandoRestar(Calculadora calc) {
+    public ComandoRestar(CalculadoraMementable calc) {
         this.calculadora=calc;
     }
 

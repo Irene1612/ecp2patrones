@@ -4,7 +4,7 @@ import upm.jbb.IO;
 
 public class ComandoImprimir extends Comando {
     
-    public ComandoImprimir(Calculadora calc) {
+    public ComandoImprimir(CalculadoraMementable calc) {
         this.calculadora=calc;
     }
 
